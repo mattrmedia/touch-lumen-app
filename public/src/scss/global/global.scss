@@ -1,0 +1,36 @@
+@import 'reset';
+
+body {
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to bottom, $blue 0%, #000000 100%);
+}
+
+.wrapper {
+  display: flex;
+  flex: 1 auto;
+  flex-flow: row wrap;
+  max-height: 1920px;
+  max-width: 1080px;
+  overflow: hidden;
+
+  & > * {
+    flex: 1 100%;
+  }
+}
+
+@import 'utilities';

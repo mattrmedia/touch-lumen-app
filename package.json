@@ -1,0 +1,26 @@
+{
+  "name": "ixrdemo",
+  "version": "1.0.0",
+  "description": "IXR Demo",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true public/src/scss/styles.scss -o public/css",
+    "build-task:autoprefixer": "postcss public/css/*.css --use autoprefixer -d public/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'public/src/scss/**/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p sass:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.2.4",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^4.1.1"
+  }
+}

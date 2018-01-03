@@ -1,0 +1,6 @@
+// Heading Classes
+@each $heading, $size in $font-sizes {
+  .#{$heading} {
+    font-size: #{$size};
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  order: 1;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 1.25rem;
+  }
+
+  &__logo {
+    padding: 0.9rem 1.25rem;
+    @include border-radii($tl: 0, $tr: 0, $bl: 0.65rem, $br: 0.65rem)
+    background-color: white;
+    filter: drop-shadow( -3px -3px 5px #333);
+  }
+}
