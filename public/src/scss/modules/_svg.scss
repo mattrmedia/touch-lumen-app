@@ -1,0 +1,13 @@
+.svg {
+  vertical-align: middle;
+
+  &--caduceus {
+    width: 60px;
+  }
+
+  &--close,
+  &--menu {
+    width: 90px;
+    font-size: 0.7rem;
+  }
+}
