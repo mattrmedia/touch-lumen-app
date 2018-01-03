@@ -19,6 +19,6 @@ $router->get('/', function () use ($router) {
     return $router->app->make('view')->make('index');
 });
 
-$router->get('/category/{id}', function ($id) use ($router) {
-
+$router->get('/category', function () use ($router) {
+    return $router->app->make('view')->make('categories/index');
 });
