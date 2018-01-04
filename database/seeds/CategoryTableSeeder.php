@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
 class CategoryTableSeeder extends Seeder
 {

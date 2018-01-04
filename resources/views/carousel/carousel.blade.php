@@ -48,12 +48,12 @@
 <div class="carousel">
   {{-- <h1 class="h1"><a href="{{ action('CategoryController@index') }}">Welcome</a></h1> --}}
   @foreach($categories as $category)
-    <h2 class="carousel__title">
-      {{ $category['title'] }}
+    <h2 class="carousel__name">
+      {{ $category['name'] }}
     </h2>
     <p class="carousel__copy">
       {{ $category['copy'] }}
     </p>
-    <a href="{{ route('category', ['id' => $category['id'] ])}}" data-category="{{ str_replace(" ","_", strtolower($category['title'])) }}">Tap to Open</a>
+    <a href="{{ route('category', ['id' => $category['id'] ])}}" data-category="{{ str_replace(" ","_", strtolower($category['name'])) }}">Tap to Open</a>
   @endforeach
 </div>
