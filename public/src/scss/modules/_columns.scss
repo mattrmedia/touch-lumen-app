@@ -1,0 +1,25 @@
+.columns {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  .column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &--full {
+      display: block;
+      flex: none;
+      width: 100%;
+    }
+
+    @for $i from 2 through $grid-columns {
+      &--#{$i} > * {
+        flex: none;
+        width: percentage(100 / ($i * 100));
+      }
+    }
+  }
+}

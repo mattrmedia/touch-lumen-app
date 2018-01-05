@@ -4,6 +4,7 @@
   justify-content: space-between;
   order: 1;
   max-height: 10%;
+  z-index: z-index(stratosphere);
 
   &__menu {
     display: flex;

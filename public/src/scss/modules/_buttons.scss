@@ -7,6 +7,16 @@ $buttons: (
   ),
 );
 
+.button {
+  padding: 0.7rem 5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
 @each $type, $values in $buttons {
   .button {
     &--#{$type} {
@@ -19,14 +29,4 @@ $buttons: (
      color: map-get($values, font-color);
     }
   }
-}
-
-.button {
-  padding: 0.6rem 5rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.075rem;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
 }

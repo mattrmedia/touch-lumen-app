@@ -15,4 +15,17 @@ $font-sizes: (
   h3: 2rem,
   h4: 1.75rem,
   h5: 1.5rem,
-)
+);
+
+// Z-index
+$layers: (
+  exosphere: 100,
+  stratosphere: 10,
+  crust: 0,
+  mantle: -10,
+  core: -100,
+);
+
+// Grid
+$column-gap: 1rem;
+$grid-columns: 8;
