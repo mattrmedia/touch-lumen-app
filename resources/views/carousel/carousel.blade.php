@@ -1,59 +1,17 @@
-@php
-  $categories = [
-    [
-      'id' => '1',
-      'name' => 'Heart Attack',
-      'copy' => 'Reducing Your Risk',
-      'image' => 'card6.png',
-    ],
-    [
-      'id' => '2',
-      'name' => 'Shingles',
-      'copy' => 'Preventing this Painful Virus',
-      'image' => 'card3.png',
-    ],
-    [
-      'id' => '3',
-      'name' => 'Bone Health and Osteoporosis',
-      'copy' => 'Protecting Your Bones',
-      'image' => 'card2.png',
-    ],
-    [
-      'id' => '4',
-      'name' => 'High Blood Pressure',
-      'copy' => 'Improving Your Numbers',
-      'image' => 'card5.png',
-    ],
-    [
-      'id' => '5',
-      'name' => 'Atrial Fibrillation',
-      'copy' => 'Managing Irregular Heartbeat',
-      'image' => 'afib_passive_card.jpg',
-    ],
-    [
-      'id' => '6',
-      'name' => 'Heartburn and Acid Reflux',
-      'copy' => 'Reducing Stomach Acid',
-      'image' => 'card7.png',
-    ],
-    [
-      'id' => '7',
-      'name' => 'Stroke',
-      'copy' => 'Know the Signs',
-      'image' => 'card8.png',
-    ],
-  ]
- @endphp
-
+<h1 class="content__title h1">Welcome</h1> <!-- This should get moved somewhere easier to understand -->
 <div class="carousel">
-  {{-- <h1 class="h1"><a href="{{ action('CategoryController@index') }}">Welcome</a></h1> --}}
   @foreach($categories as $category)
-    <h2 class="carousel__name">
-      {{ $category['name'] }}
-    </h2>
-    <p class="carousel__copy">
-      {{ $category['copy'] }}
-    </p>
-    <a href="{{ route('category', ['id' => $category['id'] ])}}" data-category="{{ str_replace(" ","_", strtolower($category['name'])) }}">Tap to Open</a>
+    <article class="card" data-id="{{ $category['id'] }}">
+      <a href="{{ route('category', ['id' => $category['id'] ])}}">
+        <img class="card__image" src="/images/{{ $category['image'] }}" alt="{{ $category['name']}} Image">
+        <h2 class="card__name">
+          {{ $category['name'] }}
+        </h2>
+        <p class="card__copy">
+          {{ $category['description'] }}
+        </p>
+        <button type="button" data-category="{{ str_replace(" ","_", strtolower($category['name'])) }}">Tap to Open</button>
+      </a>
+    </article>
   @endforeach
 </div>

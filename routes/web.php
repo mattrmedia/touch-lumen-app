@@ -11,14 +11,18 @@
 |
 */
 
+
 // $router->get('/', function () use ($router) {
 //     return $router->app->version();
 // });
 
+use App\Models\Category;
+
 $router->get('/', function () use ($router) {
-    return $router->app->make('view')->make('index');
+  $categories = Category::all();
+
+  return $router->app->make('view')->make('index', ['categories' => $categories]);
+
 });
 
-$router->get('category/{id}', [ 'as' => 'category', 'uses' => 'CategoryController@show', function($id) {
-  return $router->app->make('view')->make('categories.show');
-}]);
+$router->get('category/{id}', [ 'as' => 'category', 'uses' => 'CategoryController@show', function() {}]);

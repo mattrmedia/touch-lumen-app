@@ -1,4 +1,5 @@
 @extends('layout')
 @section('content')
-  <h1 class="h1">You're Not Welcome</h1>
+  <div class="category__bg" style="background: url('/images/{{ $category['image'] }}') center center/cover no-repeat fixed;"></div>
+  @include('drawer')
 @endsection

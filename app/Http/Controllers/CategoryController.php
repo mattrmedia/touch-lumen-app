@@ -14,6 +14,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        return Category::findOrFail($id);
+        $category = Category::findOrFail($id);
+        return view('categories.show', ['category' => $category]);
     }
 }

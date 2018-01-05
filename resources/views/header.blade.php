@@ -3,6 +3,6 @@
     @include('shared/svgs/caduceus')
   </div>
   <div class="header__logo">
-    <img src="images/practiceLogo-1.png" alt="Logo">
+    <img src="{{ url('/images/practiceLogo-1.png') }}" alt="Logo">
   </div>
 </div>
