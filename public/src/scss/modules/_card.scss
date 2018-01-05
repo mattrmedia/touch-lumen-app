@@ -1,8 +1,52 @@
 .card {
   flex: 1 0 auto;
+  margin: 0 2.5rem;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    position: absolute;
+    height: 93%;
+    width: 90%;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 10%, rgba(51, 51, 51, 0.9) 100%)
+  }
 
   &__image {
-    height: 1110px;
-    width: 720px;
+    height: 1170px;
+    width: 780px;
+    border-radius: 10px;
+  }
+
+  &__navigation {
+    flex: 55px 0;
+    align-self: center;
+  }
+
+  &__info {
+    flex: 1;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__name {
+    font-weight: 600;
+    line-height: 1.3;
+    color: #fff;
+  }
+
+  &__copy {
+    margin-bottom: 3rem;
+    font-size: 1.75rem;
+    font-weight: 100;
+    color: #fff;
   }
 }

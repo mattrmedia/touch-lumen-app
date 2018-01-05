@@ -18,13 +18,14 @@ img {
 #app {
   display: flex;
   height: 100vh;
-  background: linear-gradient(to bottom, $blue 0%, #000000 100%);
+  background: linear-gradient(to bottom, $dk-blue 0%, #000000 100%);
 }
 
 .wrapper {
   display: flex;
   flex: 1 auto;
   flex-flow: column;
+  position: relative;
   max-height: 1920px;
   max-width: 1080px;
   overflow: hidden;

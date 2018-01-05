@@ -1,0 +1,32 @@
+$buttons: (
+  primary: (
+    font-color: #fff, background-color: $blue, box-shadow: true, border-radius: 20px, border: none,
+  ),
+  secondary: (
+    font-color: $blue, background-color: #fff, box-shadow: true, border-radius: 20px, border: none,
+  ),
+);
+
+@each $type, $values in $buttons {
+  .button {
+    &--#{$type} {
+     @if (map-get($values, box-shadow)) {
+       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+     }
+     border: map-get($values, border);
+     border-radius: map-get($values, border-radius);
+     background-color: map-get($values, background-color);
+     color: map-get($values, font-color);
+    }
+  }
+}
+
+.button {
+  padding: 0.6rem 5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+}

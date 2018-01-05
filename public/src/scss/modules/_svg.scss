@@ -10,4 +10,9 @@
     width: 90px;
     font-size: 0.7rem;
   }
+
+  &--leftPaddle,
+  &--rightPaddle {
+    width: 55px;
+  }
 }
