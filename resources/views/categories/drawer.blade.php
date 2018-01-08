@@ -8,28 +8,13 @@
   <div class="drawer__content columns">
     <div class="column column--full">
       <div class="tile" style="background-color:red;">
-        Featured Tile
+        @include('/shared/tile')
       </div>
     </div>
     <div class="column column--3">
-      <div class="">
-        This is it
-      </div>
-      <div class="">
-        This is it
-      </div>
-      <div class="">
-        This is it
-      </div>
-      <div class="">
-        This is it
-      </div>
-      <div class="">
-        This is it
-      </div>
-      <div class="">
-        This is it
-      </div>
+      @for ($i = 1; $i <= 6; $i++)
+        @include('/shared/tile', ['category' => $category])
+      @endfor
     </div>
   </div>
 </div>
