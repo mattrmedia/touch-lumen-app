@@ -1,4 +1,5 @@
 <div class="tile">
-  
-  <h1>{{ $category['name'] }}</h1>
+  <div class="tile_bg" style="background: url('/images/{{ $tile['image'] }}') center center/cover no-repeat fixed;"></div>
+
+  <h1>{{ $tile['title'] }}</h1>
 </div>

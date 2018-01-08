@@ -1,0 +1,57 @@
+[{
+  "title": "Complete Guide",
+  "description": "Your complete guide",
+  "type": "image",
+  "image": "afib_complete_img.jpg",
+  "video": "",
+  "featured": "1"
+}, {
+  "title": "What is it?",
+  "description": "Lots of information on the topic",
+  "type": "video",
+  "image": "videoTileImg1.jpg",
+  "video": "https://www.youtube.com/embed/ScMzIvxBSi4",
+  "featured": "0"
+}, {
+  "title": "Questions to Ask Your Doctor",
+  "description": "List of questions to ask your doctor",
+  "type": "image",
+  "image": "contentTile3.jpg",
+  "video": "",
+  "featured": "0"
+}, {
+  "title": "Quick Facts",
+  "description": "List of easy to understand info on your topic",
+  "type": "image",
+  "image": "graph-tile-1.jpg",
+  "video": "",
+  "featured": "0"
+}, {
+  "title": "New Medication Treatment Options",
+  "description": "Exciting new methods to help treat your issue",
+  "type": "video",
+  "image": "healthination_afib_vid_tile.png",
+  "video": "pre-roll_healthination_sample.mp4",
+  "featured": "0"
+}, {
+  "title": "3D Rotatable Model",
+  "description": "3D Interactive Tour",
+  "type": "3d",
+  "image": "3d_TileImg1.jpg",
+  "video": "",
+  "featured": "0"
+}, {
+  "title": "Does It Run in Families?",
+  "description": "Frequently Asked Questions on the topic",
+  "type": "image",
+  "image": "contentTile2b.png",
+  "video": "",
+  "featured": "0"
+}, {
+  "title": "Ever Wonder About...",
+  "description": "Another frequently asked question about the topic",
+  "type": "image",
+  "image": "contentTile5.jpg",
+  "video": "",
+  "featured": "0"
+}]

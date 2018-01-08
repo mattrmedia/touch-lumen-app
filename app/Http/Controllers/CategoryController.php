@@ -15,6 +15,9 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::findOrFail($id);
-        return view('categories.show', ['category' => $category]);
+        $featured = $category->tiles->where('featured', 1)->first();
+        $tiles = $category->tiles->where('featured', 0);
+
+        return view('categories.show', ['category' => $category, 'tiles' => $tiles, 'featured' => $featured]);
     }
 }

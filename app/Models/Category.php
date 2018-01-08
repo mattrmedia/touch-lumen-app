@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-final class Category extends Model
+class Category extends Model
 {
-
+  function tiles()
+  {
+    return $this->hasMany('App\Models\Tile');
+  }
 }
