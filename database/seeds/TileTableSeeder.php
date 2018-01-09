@@ -25,7 +25,7 @@ class TileTableSeeder extends Seeder
                     \App\Models\Tile::create([
                         'title' => $tile->title,
                         'description' => (isset($tile->description) ? $tile->description: ''),
-                        'type' => (isset($tile->type) ? $tile->type: 0),
+                        'type' => (isset($tile->type) ? $tile->type: ''),
                         'image' => (isset($tile->image) ? $tile->image: ''),
                         'video' => (isset($tile->video) ? $tile->video: ''),
                         'featured' => (isset($tile->featured) ? $tile->featured: 0),

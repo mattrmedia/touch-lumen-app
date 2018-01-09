@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Helpers\Helpers;
 
 class CategoryController extends Controller
 {
@@ -20,4 +21,5 @@ class CategoryController extends Controller
 
         return view('categories.show', ['category' => $category, 'tiles' => $tiles, 'featured' => $featured]);
     }
+
 }

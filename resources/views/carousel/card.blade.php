@@ -1,5 +1,5 @@
 <article class="card" data-id="{{ $category['id'] }}">
-  <a class="card__link" href="{{ route('category', ['id' => $category['id'] ])}}">
+  <a class="card__link" href="{{ route('category', ['id' => $category['id']]) }}">
     <img class="card__image" src="/images/{{ $category['image'] }}" alt="{{ $category['name']}} Image">
     <div class="card__content">
       <div class="card__navigation card__navigation--left">

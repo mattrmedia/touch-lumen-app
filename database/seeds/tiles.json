@@ -1,7 +1,7 @@
 [{
   "title": "Complete Guide",
   "description": "Your complete guide",
-  "type": "image",
+  "type": "article",
   "image": "afib_complete_img.jpg",
   "video": "",
   "featured": "1"
@@ -15,14 +15,14 @@
 }, {
   "title": "Questions to Ask Your Doctor",
   "description": "List of questions to ask your doctor",
-  "type": "image",
+  "type": "",
   "image": "contentTile3.jpg",
   "video": "",
   "featured": "0"
 }, {
   "title": "Quick Facts",
   "description": "List of easy to understand info on your topic",
-  "type": "image",
+  "type": "article",
   "image": "graph-tile-1.png",
   "video": "",
   "featured": "0"
@@ -43,14 +43,14 @@
 }, {
   "title": "Does It Run in Families?",
   "description": "Frequently Asked Questions on the topic",
-  "type": "image",
+  "type": "",
   "image": "contentTile2b.png",
   "video": "",
   "featured": "0"
 }, {
   "title": "Ever Wonder About...",
   "description": "Another frequently asked question about the topic",
-  "type": "image",
+  "type": "article",
   "image": "contentTile5.jpg",
   "video": "",
   "featured": "0"

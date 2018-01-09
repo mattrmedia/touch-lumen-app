@@ -6,12 +6,12 @@
     {{ $category['name'] }}
   </h1>
   <div class="drawer__content columns">
-    <div class="column column--full">
-      @include('/shared/featured-tile')
+    <div class="column column--full mb-2">
+      @include('/shared/tile', ['tile' => $featured, 'feature' => true])
     </div>
     <div class="column column--3">
       @foreach($tiles as $tile)
-        @include('/shared/tile')
+        @include('/shared/tile', ['feature' => false])
       @endforeach
     </div>
   </div>
