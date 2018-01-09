@@ -13,3 +13,43 @@
     font-size: #{$size};
   }
 }
+
+$positions: (top, bottom, left, right, x, y, xy);
+
+@for $i from 1 through 4 {
+  @each $position in $positions {
+    @if $position == 'xy' {
+      .m#{$position}-#{$i} {
+        margin: #{$i}rem;
+      }
+
+      .p#{$position}-#{$i} {
+        padding: #{$i}rem;
+      }
+    } @elseif $position == 'x' {
+      .m#{$position}-#{$i} {
+        margin: 0 #{$i}rem;
+      }
+
+      .p#{$position}-#{$i} {
+        padding: 0 #{$i}rem;
+      }
+    } @elseif $position == 'y' {
+      .m#{$position}-#{$i} {
+        margin: #{$i}rem 0;
+      }
+
+      .p#{$position}-#{$i} {
+        padding: #{$i}rem 0;
+      }
+    } @else {
+      .m#{str-slice($position, 0, 1)}-#{$i} {
+        margin-#{$position}: #{$i}rem;
+      }
+
+      .p#{str-slice($position, 0, 1)}-#{$i} {
+        padding-#{$position}: #{$i}rem;
+      }
+    }
+  }
+}

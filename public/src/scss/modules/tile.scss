@@ -39,8 +39,9 @@
   }
 
   &__btn {
-    position: relative;
-    bottom: -50px;
+    position: absolute;
+    bottom: -80px;
     font-size: 2rem;
+    transform: translate(-50%);
   }
 }
