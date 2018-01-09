@@ -6,6 +6,11 @@
   z-index: z-index(stratosphere);
 
   &__menu {
+    display: flex;
     padding-left: 1rem;
+
+    > * {
+      margin-right: 0.75rem;
+    }
   }
 }

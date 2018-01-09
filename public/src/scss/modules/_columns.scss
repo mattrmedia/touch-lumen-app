@@ -6,11 +6,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 1rem;
 
     &--full {
       display: block;
       flex: none;
-      width: 100%;
     }
 
     @for $i from 2 through $grid-columns {
