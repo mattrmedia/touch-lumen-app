@@ -4,7 +4,7 @@
   justify-content: space-between;
   order: 1;
   max-height: 10%;
-  z-index: z-index(stratosphere);
+  z-index: z-index(exosphere);
 
   &__menu {
     display: flex;
@@ -18,6 +18,10 @@
     padding: 0.9rem 1.25rem;
     @include border-radii($tl: 0, $tr: 0, $bl: 0.65rem, $br: 0.65rem)
     background-color: white;
+    filter: drop-shadow( -3px -3px 5px #333);
+  }
+
+  &__toggle {
     filter: drop-shadow( -3px -3px 5px #333);
   }
 }

@@ -19,6 +19,8 @@
         <footer class="footer">
           @include('footer')
         </footer>
+        @include('modal')
+        @include('header-menu')
       </div>
     </div>
   </body>

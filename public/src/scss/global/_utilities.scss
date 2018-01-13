@@ -1,10 +1,22 @@
 //
 .show {
-  display: block;
+  display: block !important;
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0ms 300ms, opacity 300ms ease;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease;
 }
 
 // Heading Classes
@@ -20,38 +32,38 @@ $positions: (top, bottom, left, right, x, y, xy);
   @each $position in $positions {
     @if $position == 'xy' {
       .m#{$position}-#{$i} {
-        margin: #{$i}rem;
+        margin: #{$i}rem !important;
       }
 
       .p#{$position}-#{$i} {
-        padding: #{$i}rem;
+        padding: #{$i}rem !important;
       }
     }
     @elseif $position == 'x' {
       .m#{$position}-#{$i} {
-        margin: 0 #{$i}rem;
+        margin: 0 #{$i}rem !important;
       }
 
       .p#{$position}-#{$i} {
-        padding: 0 #{$i}rem;
+        padding: 0 #{$i}rem !important;
       }
     }
     @elseif $position == 'y' {
       .m#{$position}-#{$i} {
-        margin: #{$i}rem 0;
+        margin: #{$i}rem 0 !important;
       }
 
       .p#{$position}-#{$i} {
-        padding: #{$i}rem 0;
+        padding: #{$i}rem 0 !important;
       }
     }
     @else {
       .m#{str-slice($position, 0, 1)}-#{$i} {
-        margin-#{$position}: #{$i}rem;
+        margin-#{$position}: #{$i}rem !important;
       }
 
       .p#{str-slice($position, 0, 1)}-#{$i} {
-        padding-#{$position}: #{$i}rem;
+        padding-#{$position}: #{$i}rem !important;
       }
     }
   }

@@ -1,5 +1,5 @@
 <div class="header__menu">
-  <div class="header__toggle js-toggle" data-toggle="header">
+  <div class="header__toggle js-menu" data-target="header-menu">
     @include('shared/svgs/caduceus')
   </div>
   <div class="header__logo">

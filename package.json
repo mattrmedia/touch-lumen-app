@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build:js": "browserify public/src/js/index.js -d -t babelify -o public/js/bundle.js",
+    "watch:js": "watchify public/src/js/index.js -d -v -t babelify -o public/js/bundle.js",
     "build-task:scss-compile": "node-sass-chokidar --source-map true public/src/scss/styles.scss -o public/css",
     "build-task:autoprefixer": "postcss public/css/*.css --use autoprefixer -d public/css",
     "sass:build": "npm-run-all -p build-task:*",

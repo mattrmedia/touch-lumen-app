@@ -16,6 +16,11 @@ img {
   height: auto;
 }
 
+sup {
+  font-size: smaller;
+  vertical-align: super;
+}
+
 #app {
   display: flex;
   height: 100vh;

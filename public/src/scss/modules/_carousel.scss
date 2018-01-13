@@ -1,7 +1,11 @@
 .carousel {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  position: relative;
+  left: -50%;
+  transform: translateX(100%);
 
+  &.is-set {
+    transform: none;
+    transition: transform .5s cubic-bezier(.23, 1, .32, 1);
+  }
 }

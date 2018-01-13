@@ -1,5 +1,5 @@
 <div class="drawer">
-  <div class="drawer__toggle js-toggle" data-toggle="drawer">
+  <div class="drawer__toggle js-toggle">
     @include('/shared/svgs/plus')
   </div>
   <h1 class="drawer__title h1">

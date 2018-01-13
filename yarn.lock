@@ -3193,6 +3193,10 @@ shell-quote@^1.4.2, shell-quote@^1.4.3, shell-quote@^1.6.1:
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
 
+siema@^1.4.12:
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/siema/-/siema-1.4.12.tgz#1ca6d4376110271dac13b51a1261ad55a45755c6"
+
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
