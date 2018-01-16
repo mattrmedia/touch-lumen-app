@@ -46,11 +46,11 @@
       <h5 class="header-menu__title h5">Quick Links</h5>
       <div class="columns">
         <div class="header-menu__row">
-          <a class="header-menu__button button button--primary" href="#">Portal URL</a>
-          <a class="header-menu__button button button--primary" href="#">Website</a>
-          <a class="header-menu__button button button--primary" href="#">Survey</a>
-          <a class="header-menu__button button button--primary" href="#">Video</a>
-          <a class="header-menu__button button button--primary" href="#">Video 2</a>
+          <a class="mxy-1 button button--primary" href="#">Portal URL</a>
+          <a class="mxy-1 button button--primary" href="#">Website</a>
+          <a class="mxy-1 button button--primary" href="#">Survey</a>
+          <a class="mxy-1 button button--primary" href="#">Video</a>
+          <a class="mxy-1 button button--primary" href="#">Video 2</a>
         </div>
       </div>
     </section>

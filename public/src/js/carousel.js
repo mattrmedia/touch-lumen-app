@@ -1,31 +1,31 @@
 const $ = require('jquery');
 
-const next = (el, eles) => {
+const next = (card, cards) => {
   let $nextCard;
 
-  if (el.next().length > 0) {
-    $nextCard = el.next();
+  if (card.next().length > 0) {
+    $nextCard = card.next();
   } else {
-    $nextCard = eles.first();
+    $nextCard = cards.first();
   }
 
   return $nextCard;
 };
 
 
-const prev = (el, eles) => {
+const prev = (card, cards) => {
   let $prevCard;
 
-  if (el.prev().length > 0) {
-    $prevCard = el.prev();
+  if (card.prev().length > 0) {
+    $prevCard = card.prev();
   } else {
-    $prevCard = eles.last();
+    $prevCard = cards.last();
   }
 
   return $prevCard;
 };
 
-const moveCard = (e) => {
+const move = (e) => {
   const cards = $('.carousel').children();
   const ref = cards.length;
   const last = $('.last').removeClass('last');
@@ -39,11 +39,12 @@ const moveCard = (e) => {
 
   newLast.addClass('last').css('order', 1);
 
+  // TODO: this is magic, it should be more explicit / understandable
   for (i = j = 2, ref; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
     newLast = next(newLast, cards).css('order', i);
   }
 };
 
 module.exports = {
-  moveCard,
+  move,
 };

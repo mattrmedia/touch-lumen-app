@@ -11,8 +11,8 @@
     "watch:js": "watchify public/src/js/index.js -d -v -t babelify -o public/js/bundle.js",
     "build-task:scss-compile": "node-sass-chokidar --source-map true public/src/scss/styles.scss -o public/css",
     "build-task:autoprefixer": "postcss public/css/*.css --use autoprefixer -d public/css",
-    "sass:build": "npm-run-all -p build-task:*",
-    "sass:watch": "chokidar 'public/src/scss/**/*.scss' -c 'npm run sass:build'",
+    "build:scss": "npm-run-all -p build-task:*",
+    "watch:scss": "chokidar 'public/src/scss/**/*.scss' -c 'npm run build:scss'",
     "dev": "npm-run-all -p sass:*"
   },
   "keywords": [],
@@ -25,6 +25,7 @@
     "babelify": "^8.0.0",
     "browserify": "^15.0.0",
     "chokidar-cli": "^1.2.0",
+    "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.2",
