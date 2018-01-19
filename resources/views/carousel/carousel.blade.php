@@ -1,6 +1,7 @@
 @php
   $count = 0;
   $last = false;
+  $active = false;
   $length = count($categories);
 @endphp
 <h1 class="content__title h1">Welcome</h1> <!-- This should get moved somewhere easier to understand -->
