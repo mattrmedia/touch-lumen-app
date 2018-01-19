@@ -26,6 +26,12 @@
   }
 }
 
+.u-flex-bottom {
+  flex: 1;
+  align-self: flex-end;
+  text-align: center;
+}
+
 $positions: (top, bottom, left, right, x, y, xy);
 
 @for $i from 1 through 4 {

@@ -17,24 +17,31 @@
   &__info {
     display: flex;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: z-index(stratosphere);
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    border-radius: 10px;
+    border: 5px solid #fff;
     background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 10%, rgba(51, 51, 51, 0.9) 100%)
+  }
+
+  &__image {
+    border-radius: 10px;
   }
 
   &__navigation {
     flex: 55px 0;
     align-self: center;
+    z-index: z-index(stratosphere);
   }
 
-  .u-flex-bottom {
-    flex: 1;
-    align-self: flex-end;
-    margin-bottom: 3rem;
-    text-align: center;
+  &__link {
+    flex: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: z-index(crust);
   }
 
   &__name {

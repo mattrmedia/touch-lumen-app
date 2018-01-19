@@ -1,13 +1,20 @@
 <article class="card {{ $last ? 'last' : '' }}" data-id="{{ $category['id'] }}">
+  @if($count % 3)
+    @php
+      $sponsor = false;
+    @endphp
+    <div class="card__banner card__banner--top">
+      @include('shared/banner', ['sponsor' => $sponsor])
+    </div>
+  @endif
   <div class="card__content">
-    <a class="card__link" href="{{ route('category', ['id' => $category['id']]) }}">
-      <img class="card__image" src="/images/{{ $category['image'] }}" alt="{{ $category['name']}} Image">
-    </a>
+    <img class="card__image" src="/images/{{ $category['image'] }}" alt="{{ $category['name']}} Image">
     <div class="card__info">
+      <a class="card__link" href="{{ route('category', ['id' => $category['id']]) }}"></a>
       <div class="card__navigation card__navigation--left" data-toggle="prev">
         @include('/shared/svgs/leftPaddle')
       </div>
-      <div class="u-flex-bottom">
+      <div class="u-flex-bottom mb-3">
         <h1 class="card__name h1">
           {{ $category['name'] }}
         </h1>
@@ -23,4 +30,12 @@
       </div>
     </div>
   </div>
+  @if($count % 3)
+    @php
+      $sponsor = false;
+    @endphp
+    <div class="card__banner card__banner--bottom">
+      @include('shared/banner', ['sponsor' => $sponsor])
+    </div>
+  @endif
 </article>

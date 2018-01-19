@@ -26,15 +26,21 @@ const prev = (card, cards) => {
 };
 
 const move = (e) => {
+  const carousel = $('#carouselContainer');
   const cards = $('.carousel').children();
   const ref = cards.length;
   const last = $('.last').removeClass('last');
   let newLast;
 
-  if ($(e.currentTarget).data('toggle') === 'next') {
-    newLast = next(last, cards);
-  } else {
+  carousel.removeClass('set');
+  setTimeout(() => carousel.addClass('set'), 50);
+
+  if ($(e.currentTarget).data('toggle') === 'prev' || e.type === 'swiperight') {
     newLast = prev(last, cards);
+    carousel.addClass('reverse');
+  } else {
+    newLast = next(last, cards);
+    carousel.removeClass('reverse');
   }
 
   newLast.addClass('last').css('order', 1);

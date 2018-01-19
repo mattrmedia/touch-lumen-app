@@ -4,15 +4,14 @@
   $length = count($categories);
 @endphp
 <h1 class="content__title h1">Welcome</h1> <!-- This should get moved somewhere easier to understand -->
-<div class="carousel is-set">
+<div id="carouselContainer" class="carousel set">
   @foreach($categories as $category)
     @php
-    $count++;
-
-    if($count == $length) {
-      $last = true;
-    }
+      $count++;
     @endphp
-    @include('carousel/card', ['last' => $last])
+    @if($count % 2)
+      @include('carousel/ad', ['last' => $count == $length ? $last = true : $last = false])
+    @endif
+    @include('carousel/card', ['last' => $count == $length ? $last = true : $last = false, 'count' => $count])
   @endforeach
 </div>

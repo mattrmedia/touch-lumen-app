@@ -2,10 +2,14 @@
   display: flex;
   position: relative;
   left: -78%;
-  transform: translateX(100%);
+  transform: translateX(7%);
 
-  &.is-set {
+  &.reverse {
+    transform: translateX(-7%);
+  }
+
+  &.set {
     transform: none;
-    transition: transform .5s cubic-bezier(.23, 1, .32, 1);
+    transition: transform 1s cubic-bezier(.23, 1, .32, 1);
   }
 }

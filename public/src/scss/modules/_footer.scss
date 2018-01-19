@@ -3,7 +3,7 @@
   align-items: center;
   max-height: 10%;
   order: 3;
-  z-index: z-index(stratosphere);
+  z-index: z-index(exosphere);
 
   &__menu {
     display: flex;
@@ -11,7 +11,7 @@
     padding-left: 1rem;
 
     > * {
-      margin-right: 0.75rem;
+      margin-right: .75rem;
     }
   }
 }

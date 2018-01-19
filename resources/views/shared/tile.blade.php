@@ -1,10 +1,10 @@
 <div class="tile">
   <div class="tile__content">
-    @if($tile['type'])
+    @isset($tile['type'])
       <div class="tile__icon">
         <img src="{{ setIcon($tile['type']) }}" alt="Icon">
       </div>
-    @endif
+    @endisset
     <h5 class="tile__title {{ $feature ? 'h3' : 'h5' }}">{{ $tile['title'] }}</h5>
     @if($feature)
       <button class="tile__btn button button--primary" type="button">
