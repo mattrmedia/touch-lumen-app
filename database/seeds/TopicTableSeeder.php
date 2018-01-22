@@ -9,85 +9,85 @@ class TopicTableSeeder extends Seeder
     public function run()
     {
         Topic::create([
-          'name' => 'Heart Attack',
+          'title' => 'Heart Attack',
           'image' => 'card6.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Shingles',
+          'title' => 'Shingles',
           'image' => 'card3.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Bone Health and Osteoporosis',
+          'title' => 'Bone Health and Osteoporosis',
           'image' => 'card2.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'High Blood Pressure',
+          'title' => 'High Blood Pressure',
           'image' => 'card5.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Atrial Fibrillation',
+          'title' => 'Atrial Fibrillation',
           'image' => 'afib_passive_card.jpg',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Heartburn and Acid Reflux',
+          'title' => 'Heartburn and Acid Reflux',
           'image' => 'card7.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Stroke',
+          'title' => 'Stroke',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'COPD',
+          'title' => 'COPD',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Depression',
+          'title' => 'Depression',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Pain Medicine Side Effects',
+          'title' => 'Pain Medicine Side Effects',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Insomnia',
+          'title' => 'Insomnia',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Type 2 Diabetes',
+          'title' => 'Type 2 Diabetes',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'Using Insulin',
+          'title' => 'Using Insulin',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);
 
         Topic::create([
-          'name' => 'High Cholesterol',
+          'title' => 'High Cholesterol',
           'image' => 'card8.png',
           'thumbnail' => ''
         ]);

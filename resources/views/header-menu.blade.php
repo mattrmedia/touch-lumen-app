@@ -40,8 +40,13 @@
 
       <h5 class="header-menu__title h5">Frequently Used</h5>
       <div class="columns">
-        <div class="header-menu__row column column--5">
-
+        <div class="header-menu__row column column--4">
+          @foreach(array_slice($topics->toArray(), 0, 12) as $topic)
+            <div class="tile">
+              <div style="background: url('/images/{{ $topic['image'] }}') center center/cover no-repeat; height: 200px; border-radius: 5px;"></div>
+              <p class="tile__title tile__title--header">{{ $topic['title'] }}</p>
+            </div>
+          @endforeach
         </div>
       </div>
 

@@ -17,6 +17,7 @@
 // });
 
 use App\Models\Category;
+use App\Models\Topic;
 
 $router->get('/', function () use ($router) {
   $categories = Category::all();
