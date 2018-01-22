@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   flex: 1 0 auto;
   order: 2;
   margin: 0 2rem;
@@ -33,7 +34,11 @@
     left: 2rem;
     border-radius: 10px;
     border: 5px solid #fff;
-    background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 10%, rgba(51, 51, 51, 0.9) 100%)
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 10%, rgba(51, 51, 51, 0.9) 100%);
+
+    &--no-gradient {
+      background: none;
+    }
   }
 
   &__image {
@@ -67,5 +72,19 @@
     font-size: 1.75rem;
     font-weight: 100;
     color: #fff;
+  }
+
+  &__banner {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+    &--top {
+      top: -15%;
+    }
+
+    &--bottom {
+      bottom: -15%;
+    }
   }
 }

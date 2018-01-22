@@ -23,7 +23,5 @@ function toggle() {
 }
 
 module.exports = {
-  active,
-  inactive,
   toggle,
 };

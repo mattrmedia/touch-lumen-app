@@ -1,8 +1,9 @@
+@php
+  $sponsor = false;
+@endphp
+
 <article class="card {{ $last ? 'last' : '' }}" data-id="{{ $category['id'] }}">
   @if($count % 3)
-    @php
-      $sponsor = false;
-    @endphp
     <div class="card__banner card__banner--top">
       @include('shared/banner', ['sponsor' => $sponsor])
     </div>
@@ -31,9 +32,6 @@
     </div>
   </div>
   @if($count % 3)
-    @php
-      $sponsor = false;
-    @endphp
     <div class="card__banner card__banner--bottom">
       @include('shared/banner', ['sponsor' => $sponsor])
     </div>

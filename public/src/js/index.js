@@ -10,6 +10,7 @@ $(function () {
     const mc = new Hammer(carouselContainer);
     const cards = $(carouselContainer).children();
     const length = cards.length;
+
     const active = cards.get(Math.floor(length / 2) - 1);
     $(active).addClass('active');
 
@@ -19,7 +20,7 @@ $(function () {
     $('.card__navigation--right').on('click', carousel.move);
     $('.card__navigation--left').on('click', carousel.move);
 
-    // setInterval(() => $(window).trigger('swipeleft'), 15000);
+    setInterval(() => $(window).trigger('swipeleft'), 15000);
   }
 
   $('.js-toggle').on('click', toggle.toggle);

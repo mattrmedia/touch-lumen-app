@@ -1,8 +1,12 @@
+@php
+  $ads = ['custom_1.png', 'custom_2.png', 'custom_3.png', 'custom_4.png'];
+@endphp
+
 <article class="card {{ $last ? 'last' : '' }}" data-id="ad">
   <div class="card__content">
     {{-- <img class="card__image" src="/images/{{ $ad['image'] }}" alt="{{ $ad['name']}} Image"> --}}
-    <img class="card__image" src="http://placehold.it/780x1170" alt="placeholder">
-    <div class="card__info">
+    <img class="card__image" src="./images/ads/{{ $ads[array_rand($ads)] }}" alt="placeholder">
+    <div class="card__info card__info--no-gradient">
       <div class="card__navigation card__navigation--left" data-toggle="prev">
         @include('/shared/svgs/leftPaddle')
       </div>
