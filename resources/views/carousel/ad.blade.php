@@ -5,7 +5,7 @@
 <article class="card {{ $last ? 'last' : '' }}" data-id="ad">
   <div class="card__content">
     {{-- <img class="card__image" src="/images/{{ $ad['image'] }}" alt="{{ $ad['name']}} Image"> --}}
-    <img class="card__image" src="./images/ads/{{ $ads[array_rand($ads)] }}" alt="placeholder">
+    <img class="card__image" src="/images/ads/{{ $ads[array_rand($ads)] }}" alt="placeholder">
     <div class="card__info card__info--no-gradient">
       <div class="card__navigation card__navigation--left" data-toggle="prev">
         @include('/shared/svgs/leftPaddle')

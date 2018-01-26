@@ -37,6 +37,8 @@ const move = (e) => {
   const ref = cards.length;
   const last = $('.last').removeClass('last');
   const active = cards.filter('.active');
+  const prevActive = prev(active, cards);
+  const nextActive = next(active, cards);
   let newLast;
 
   carousel.removeClass('set');
@@ -45,13 +47,11 @@ const move = (e) => {
   if ($(e.currentTarget).data('toggle') === 'prev' || e.type === 'swiperight') {
     newLast = prev(last, cards);
     carousel.addClass('reverse');
-    const newActive = prev(active, cards);
-    setActiveCard(newActive);
+    setActiveCard(prevActive);
   } else {
     newLast = next(last, cards);
     carousel.removeClass('reverse');
-    const newActive = next(active, cards);
-    setActiveCard(newActive);
+    setActiveCard(nextActive);
   }
 
   newLast.addClass('last').css('order', 1);

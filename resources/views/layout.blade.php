@@ -15,11 +15,11 @@
         </header>
         <section class="content">
           @yield('content')
+          @include('shared/modal')
         </section>
         <footer class="footer">
           @include('footer')
         </footer>
-        @include('shared/modal')
         @include('header-menu')
         @include('footer-menu')
       </div>

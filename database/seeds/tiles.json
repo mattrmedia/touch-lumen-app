@@ -3,7 +3,7 @@
   "description": "Your complete guide",
   "type": "article",
   "image": "afib_complete_img.jpg",
-  "video": "",
+  "video": null,
   "featured": "1"
 }, {
   "title": "What is it?",
@@ -15,16 +15,16 @@
 }, {
   "title": "Questions to Ask Your Doctor",
   "description": "List of questions to ask your doctor",
-  "type": "",
+  "type": null,
   "image": "contentTile3.jpg",
-  "video": "",
+  "video": null,
   "featured": "0"
 }, {
   "title": "Quick Facts",
   "description": "List of easy to understand info on your topic",
   "type": "article",
   "image": "graph-tile-1.png",
-  "video": "",
+  "video": null,
   "featured": "0"
 }, {
   "title": "New Medication Treatment Options",
@@ -38,20 +38,20 @@
   "description": "3D Interactive Tour",
   "type": "3d",
   "image": "3d_TileImg1.jpg",
-  "video": "",
+  "video": null,
   "featured": "0"
 }, {
   "title": "Does It Run in Families?",
   "description": "Frequently Asked Questions on the topic",
-  "type": "",
+  "type": null,
   "image": "contentTile2b.png",
-  "video": "",
+  "video": null,
   "featured": "0"
 }, {
   "title": "Ever Wonder About...",
   "description": "Another frequently asked question about the topic",
   "type": "article",
   "image": "contentTile5.jpg",
-  "video": "",
+  "video": null,
   "featured": "0"
 }]

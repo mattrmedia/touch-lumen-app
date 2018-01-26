@@ -1,8 +1,8 @@
-<div class="tile">
+<div class="tile {{ isset($tile['type']) ? 'js-modal' : '' }}" data-{{ $tile['type'] }}="{{ setData($tile) }}" >
   <div class="tile__content">
     @isset($tile['type'])
       <div class="tile__icon">
-        <img src="{{ setIcon($tile['type']) }}" alt="Icon">
+        <img src="{{ setIcon($tile['type']) }}" alt="{{ $tile['type'] }} Icon">
       </div>
     @endisset
     <h5 class="tile__title {{ $feature ? 'h3' : 'h5' }}">{{ $tile['title'] }}</h5>

@@ -24,11 +24,11 @@ class TileTableSeeder extends Seeder
                 foreach($tiles as $tile) {
                     \App\Models\Tile::create([
                         'title' => $tile->title,
-                        'description' => (isset($tile->description) ? $tile->description: ''),
-                        'type' => (isset($tile->type) ? $tile->type: ''),
-                        'image' => (isset($tile->image) ? $tile->image: ''),
-                        'video' => (isset($tile->video) ? $tile->video: ''),
-                        'featured' => (isset($tile->featured) ? $tile->featured: 0),
+                        'description' => (isset($tile->description) ? $tile->description : NULL),
+                        'type' => (isset($tile->type) ? $tile->type : NULL),
+                        'image' => (isset($tile->image) ? $tile->image : NULL),
+                        'video' => (isset($tile->video) ? $tile->video : NULL),
+                        'featured' => (isset($tile->featured) ? $tile->featured : 0),
                         'category_id' => $key,
                     ]);
                 }

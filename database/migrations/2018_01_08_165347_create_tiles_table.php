@@ -17,9 +17,9 @@ class CreateTilesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
-            $table->enum('type', ['article', 'video', '3d', 'quiz', 'survey']);
-            $table->string('image');
-            $table->string('video');
+            $table->enum('type', ['article', 'video', '3d', 'quiz', 'survey'])->nullable();
+            $table->string('image')->nullable();
+            $table->string('video')->nullable();
             $table->boolean('featured');
             $table->integer('category_id')->unsigned()->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

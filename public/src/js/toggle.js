@@ -1,15 +1,15 @@
 const $ = require('jquery');
 
-function active(element) {
+const active = (element) => {
   element.addClass('active');
-}
+};
 
-function inactive(element) {
+const inactive = (element) => {
   element.removeClass('active');
-}
+};
 
-function toggle() {
-  const $ele = $(this).parent();
+const toggle = (e) => {
+  const $ele = $(e.currentTarget).parent();
   const activated = $ele.hasClass('active');
 
   if (activated) {
@@ -17,10 +17,10 @@ function toggle() {
   } else {
     active($ele);
   }
-}
+};
 
 module.exports = {
+  toggle,
   active,
   inactive,
-  toggle,
 };
