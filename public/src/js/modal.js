@@ -2,18 +2,19 @@ const $ = require('jquery');
 
 const show = (modal, content) => {
   modal.append(content);
-  modal.removeClass('hide').addClass('show');
+  $('body').addClass('modal--open');
 };
 
 const close = (modal) => {
-  modal.removeClass('show').addClass('hide');
-  modal.find('#content-wrapper').empty();
+  $('body').removeClass('modal--open');
+  modal.find('.content__wrapper').empty();
 };
 
 const toggle = (e) => {
+  const body = $('body');
   const modal = $('.modal');
   const content = $(e.target).closest('.js-modal').data();
-  const activated = modal.hasClass('show');
+  const activated = body.hasClass('modal--open');
 
   if (activated) {
     close(modal);

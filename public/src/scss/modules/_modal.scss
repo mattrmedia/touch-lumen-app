@@ -1,9 +1,22 @@
 .modal {
+  $b: &;
+
+  display: none;
   position: absolute;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: z-index(exosphere);
-  background-color: rgba(0, 0, 0, .5);
+
+  &--open {
+    #{$b} {
+      display: block;
+    }
+    #app {
+      filter: blur(10px) grayscale(50%) brightness(40%);
+    }
+  }
 
   &__container {
     display: flex;
@@ -23,12 +36,13 @@
     position: absolute;
     right: 0;
     padding: 0 0 5px;
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border: 1px solid #fff;
     border-radius: 50%;
     background-color: rgba(240, 240, 240, .25);
     font-size: 1.5rem;
+    font-weight: 200;
     line-height: 0;
     color: #fff;
   }

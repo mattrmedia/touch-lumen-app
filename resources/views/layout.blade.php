@@ -15,7 +15,6 @@
         </header>
         <section class="content">
           @yield('content')
-          @include('shared/modal')
         </section>
         <footer class="footer">
           @include('footer')
@@ -24,5 +23,6 @@
         @include('footer-menu')
       </div>
     </div>
+    @include('shared/modal')
   </body>
 </html>
