@@ -21,6 +21,11 @@ sup {
   vertical-align: super;
 }
 
+video {
+  width: 100% !important;
+  height: auto !important;
+}
+
 #app {
   display: flex;
   height: 100vh;

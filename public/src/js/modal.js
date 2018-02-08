@@ -1,7 +1,22 @@
 const $ = require('jquery');
 
+const mediaType = (content) => {
+  const type = Object.keys(content)[0];
+  const value = Object.values(content)[0];
+  switch (type) {
+    case 'video':
+      return "<video src='" + value + "' autoplay='true'></video>";
+    case 'article':
+      return "<iframe src='" + value + "'></iframe>";
+    default:
+      return value;
+  }
+};
+
 const show = (modal, content) => {
-  modal.append(content);
+  const media = mediaType(content);
+  
+  modal.find('.content__wrapper').append(media);
   $('body').addClass('modal--open');
 };
 
