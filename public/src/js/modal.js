@@ -5,7 +5,7 @@ const mediaType = (content) => {
   const value = Object.values(content)[0];
   switch (type) {
     case 'video':
-      return "<video src='" + value + "' autoplay='true'></video>";
+      return "<video src='/video/" + value + "' autoplay='true' controls ></video>";
     case 'article':
       return "<iframe src='" + value + "'></iframe>";
     default:
@@ -15,14 +15,14 @@ const mediaType = (content) => {
 
 const show = (modal, content) => {
   const media = mediaType(content);
-  
-  modal.find('.content__wrapper').append(media);
+
+  modal.find('.modal-content__wrapper').append(media);
   $('body').addClass('modal--open');
 };
 
 const close = (modal) => {
   $('body').removeClass('modal--open');
-  modal.find('.content__wrapper').empty();
+  modal.find('.modal-content__wrapper').empty();
 };
 
 const toggle = (e) => {
