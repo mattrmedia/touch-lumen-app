@@ -20,8 +20,7 @@ $(function () {
     $(window).on('swipeleft', carousel.move);
     $('.card__navigation--right').on('click', carousel.move);
     $('.card__navigation--left').on('click', carousel.move);
-
-    setInterval(() => $(window).trigger('swipeleft'), 15000);
+    $(carousel.autoCarousel);
   }
 
   $('.js-toggle').on('click', toggle.toggle);

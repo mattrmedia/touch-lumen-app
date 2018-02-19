@@ -21,6 +21,4 @@ const toggle = (e) => {
 
 module.exports = {
   toggle,
-  active,
-  inactive,
 };

@@ -12,7 +12,6 @@ const next = (card, cards) => {
   return $nextCard;
 };
 
-
 const prev = (card, cards) => {
   let $prevCard;
 
@@ -31,6 +30,8 @@ const setActiveCard = (card) => {
   cards.not(card).removeClass('active');
 };
 
+const autoCarousel = setInterval(() => $(window).trigger('swipeleft'), 15000);
+
 const move = (e) => {
   const carousel = $('#carouselContainer');
   const cards = $('.carousel').children();
@@ -42,6 +43,7 @@ const move = (e) => {
   let newLast;
 
   carousel.removeClass('set');
+  clearInterval(autoCarousel);
   setTimeout(() => carousel.addClass('set'), 50);
 
   if ($(e.currentTarget).data('toggle') === 'prev' || e.type === 'swiperight') {
@@ -60,8 +62,11 @@ const move = (e) => {
   for (i = j = 2, ref; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
     newLast = next(newLast, cards).css('order', i);
   }
+
+  setTimeout(() => autoCarousel, 1000);
 };
 
 module.exports = {
   move,
+  autoCarousel,
 };
