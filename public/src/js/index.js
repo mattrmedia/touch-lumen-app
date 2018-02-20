@@ -4,6 +4,7 @@ const menu = require('./menu');
 const carousel = require('./carousel');
 const modal = require('./modal');
 const Hammer = require('hammerjs');
+window.autoCarousel = [];
 
 $(function () {
   const carouselContainer = document.getElementById('carouselContainer');
@@ -20,7 +21,7 @@ $(function () {
     $(window).on('swipeleft', carousel.move);
     $('.card__navigation--right').on('click', carousel.move);
     $('.card__navigation--left').on('click', carousel.move);
-    $(carousel.autoCarousel);
+    $(carousel.auto);
   }
 
   $('.js-toggle').on('click', toggle.toggle);
