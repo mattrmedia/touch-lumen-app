@@ -4,7 +4,7 @@ const menu = require('./menu');
 const carousel = require('./carousel');
 const modal = require('./modal');
 const Hammer = require('hammerjs');
-window.autoCarousel = [];
+window.autoCarousel;
 
 $(function () {
   const carouselContainer = document.getElementById('carouselContainer');
@@ -28,4 +28,5 @@ $(function () {
   $('.js-menu').on('click', menu.toggle);
   $('.js-modal').on('click', modal.toggle);
   $('.modal__close').on('click', modal.toggle);
+  $('.collapse-menu__nav').on('click', toggle.toggle);
 });

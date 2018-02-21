@@ -4,7 +4,6 @@
 
 <article class="card {{ $last ? 'last' : '' }}" data-id="ad">
   <div class="card__content">
-    {{-- <img class="card__image" src="/images/{{ $ad['image'] }}" alt="{{ $ad['name']}} Image"> --}}
     <img class="card__image" src="/images/ads/{{ $ads[array_rand($ads)] }}" alt="placeholder">
     <div class="card__info card__info--no-gradient">
       <div class="card__navigation card__navigation--left" data-toggle="prev">
@@ -12,7 +11,6 @@
       </div>
       <div class="u-flex-bottom mb-3">
         <button class="button button--secondary" type="button" name="button">
-        {{-- <button class="button button--primary" type="button" data-ad="{{ str_replace(" ","_", strtolower($ad['name'])) }}"> --}}
           Tap to Open
         </button>
       </div>

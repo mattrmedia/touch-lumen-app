@@ -4,7 +4,7 @@
   position: absolute;
   bottom: -100%;
   width: 100%;
-  background-color: #184c75;
+  background-color: $dk-blue;
   text-align: center;
   z-index: z-index(exosphere);
   transition: all 300ms ease;
@@ -15,7 +15,7 @@
     margin: 3rem;
     padding: 2rem 4rem 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: $darken;
   }
 
   &.fade-in {

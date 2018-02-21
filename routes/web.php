@@ -27,3 +27,4 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('category/{id}', [ 'as' => 'category', 'uses' => 'CategoryController@show', function() {}]);
+$router->get('topic/{id}', [ 'as' => 'topic', 'uses' => 'TopicController@show', function() {}]);

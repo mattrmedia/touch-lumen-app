@@ -1,10 +1,10 @@
 .card {
+  $b: &;
+  
   position: relative;
   flex: 1 0 auto;
   order: 2;
   margin: 0 2rem;
-
-  $b: &;
 
   &.active {
     #{$b}__navigation {

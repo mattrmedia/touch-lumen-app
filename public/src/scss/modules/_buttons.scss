@@ -1,14 +1,17 @@
 $buttons: (
   primary: (
-    font-color: #fff, background-color: $blue, box-shadow: true, border-radius: 20px, border: none,
+    font-color: #fff, background-color: $blue, box-shadow: true, border-radius: 20px, border: none, padding: .7rem 5rem,
   ),
   secondary: (
-    font-color: $blue, background-color: #fff, box-shadow: true, border-radius: 20px, border: none,
+    font-color: $blue, background-color: #fff, box-shadow: true, border-radius: 20px, border: none, padding: .7rem 5rem,
+  ),
+  tertiary: (
+    font-color: $blue, background-color: #fff, box-shadow: false, border-radius: 0, border: 1px solid $dk-blue, padding: .5rem .75rem,
   ),
 );
 
 .button {
-  padding: 0.7rem 5rem;
+  display: inline-block;
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.075rem;
@@ -23,6 +26,7 @@ $buttons: (
      @if (map-get($values, box-shadow)) {
        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
      }
+     padding: map-get($values, padding);
      border: map-get($values, border);
      border-radius: map-get($values, border-radius);
      background-color: map-get($values, background-color);

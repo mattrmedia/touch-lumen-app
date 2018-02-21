@@ -17,6 +17,7 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -65,5 +66,10 @@
     font-size: 1.5rem;
     font-weight: 200;
     color: #000;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 2rem;
   }
 }

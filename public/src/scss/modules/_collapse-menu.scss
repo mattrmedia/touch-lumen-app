@@ -1,0 +1,54 @@
+.collapse-menu {
+  $b: &;
+
+  position: relative;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid $dk-blue;
+  border-radius: 10px;
+  flex: 1 1 auto;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+  }
+
+  &__label {
+    flex: 0 0 1;
+    border-bottom: 1px solid #184c75;
+    font-weight: bold;
+    color: $dk-blue;
+  }
+
+  &__link {
+    margin: .25rem;
+  }
+
+  &__container {
+    z-index: 10;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    overflow-y: hidden;
+  }
+
+  &.active #{$b}__container {
+    margin-bottom: 1rem;
+    bottom: auto;
+    max-height: 500px;
+  }
+
+  &__toggle {
+    flex: 0 0 20px;
+    transition: all 500ms ease-out;
+
+    svg {
+      fill: #184c75;
+    }
+  }
+
+  &.active #{$b}__toggle {
+    transform: rotate(-180deg);
+  }
+}
